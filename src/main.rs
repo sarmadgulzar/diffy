@@ -8,6 +8,7 @@ use clap::Parser;
 #[derive(Parser)]
 #[command(name = "diffy")]
 #[command(about = "A fast diff checker written in Rust")]
+#[command(version = concat!("v", env!("CARGO_PKG_VERSION")))]
 struct Args {
     before: String,
     after: String,
